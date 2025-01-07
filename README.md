@@ -10,7 +10,7 @@
 4. Chronic Health Conditions  
 5. General Health and Well-being  
 
-The application employs a trained neural network model to calculate the mental health score, offering a seamless interface for users to input their data and receive a prediction instantly.  
+The application employs a pre-trained novel neural network model named MHAPNet to calculate the mental health score, offering a seamless interface for users to input their data and receive a prediction instantly.  
 
 ---
 
@@ -32,7 +32,7 @@ MentalHealthScorePredictor/
 │   ├── routes.py          # Defines application routes and logic
 │
 ├── models/
-│   ├── mental_health_predictor.pkl  # Pre-trained neural network model (saved with Dill)
+│   ├── mental_health_predictor.pkl  # Pre-trained novel neural network model (saved with Dill)
 │   ├── scaler.pkl                   # StandardScaler for input normalization
 │
 ├── static/
@@ -61,8 +61,8 @@ MentalHealthScorePredictor/
 - **Flask**: Web framework for routing and backend logic.  
 - **PyTorch**: Machine learning framework for the trained model.  
 
-### Tools for Neural Network Model  
-- **PyTorch**: Deep learning framework used to build and train the neural network model.  
+### Tools for MMHAPNet  
+- **PyTorch**: Deep learning framework used to build and train the MHAPNet model.  
 - **NumPy**: For data manipulation and numerical operations.  
 - **Matplotlib**: Used for visualizing feature importance during model evaluation.  
 - **Scikit-learn**:  
@@ -124,7 +124,7 @@ The user provides five key parameters (values between 0 and 100) in the input fi
   The validated inputs are scaled using the `StandardScaler` object (`scaler.pkl`).  
 
 - **Prediction**:  
-  The scaled inputs are passed to the pre-trained PyTorch neural network model (`mental_health_predictor.pkl`).  
+  The scaled inputs are passed to the pre-trained MHAPNet model (`mental_health_predictor.pkl`).  
   - The model processes the inputs and predicts a **Mental Health Score** on a scale of 0 to 100.  
 
 ### 3. Output  
@@ -132,10 +132,10 @@ The predicted mental health score is displayed on the webpage, providing insight
 
 ---
 
-## 📝 Neural Network Model Details  
+## 📝 MHAP (Mental Health Assessment and Prediction Network) Details  
 
 ### Model Architecture  
-The neural network model, implemented in PyTorch, is designed to predict the **Mental Health Score** based on five input parameters. Here's the architecture:  
+The MHAPNet is a neural network model, implemented in PyTorch, is designed to predict the **Mental Health Score** based on five input parameters. Here's the architecture:  
 
 - **Input Layer**:  
   Accepts 5 input features:  
