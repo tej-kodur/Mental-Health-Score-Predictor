@@ -1,4 +1,4 @@
-# Mental Health Score Predictor
+# Mental Health Score Predictor using MHAPNet
 
 ### 🖥️ [View Repository](https://github.com/tej-kodur/Mental-Health-Score-Predictor)
 
